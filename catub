@@ -66,6 +66,21 @@ from git import Repo
 repo = Repo('https://github.com/tcg2710/catuserbot')
 
 # Now you can use repo to interact with the Git repository, such as getting information about commits, branches, etc.
+import subprocess
+
+# Define the shell command you want to run
+shell_command = 'git clone https://github.com/tcg2710/catuserbot.git'
+
+# Use subprocess to run the shell command
+result = subprocess.run(shell_command, shell=True, capture_output=True)
+
+# Check the result
+if result.returncode == 0:
+    print('Command executed successfully.')
+else:
+    print('Command failed with error code:', result.returncode)
+    print('Error output:', result.stderr.decode('utf-8'))
+
 
 _run_catpackgit() {
     $(_run_python_code 'from git import Repo
