@@ -60,11 +60,18 @@ if output:
     print(output.decode('utf-8'))
 if error:
     print(error.decode('utf-8'))
+from git import Repo
+
+# Initialize a Repo object with the path to your Git repository
+repo = Repo('https://github.com/tcg2710/catuserbot')
+
+# Now you can use repo to interact with the Git repository, such as getting information about commits, branches, etc.
+
 _run_catpackgit() {
     $(_run_python_code 'from git import Repo
 import sys
 
-OFFICIAL_UPSTREAM_REPO = "https://github.com/TgCatUB/nekopack"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/tcg2710/catuserbot"
 ACTIVE_BRANCH_NAME = "master"
 
 repo = Repo.init()
