@@ -1,1 +1,1 @@
-worker: bash catub
+web: node catub
