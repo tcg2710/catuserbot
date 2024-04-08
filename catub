@@ -92,6 +92,17 @@ except Exception as e:
 
 
 _run_catpackgit() {
+# Import the necessary module directly
+from git import Repo
+
+# Now you can use the imported module, for example:
+try:
+    # Attempt to create a new Git repository instance
+    repo = Repo('https://github.com/tcg2710/catuserbot')
+    print('Repository created successfully.')
+except Exception as e:
+    print('Error creating repository:', e)
+
     $(_run_python_code 'from git import Repo
 import sys
 
