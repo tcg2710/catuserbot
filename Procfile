@@ -1,1 +1,2 @@
-web: node catub
+web: python3 catub
+worker: python3 catub
