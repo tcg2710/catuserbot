@@ -80,6 +80,15 @@ if result.returncode == 0:
 else:
     print('Command failed with error code:', result.returncode)
     print('Error output:', result.stderr.decode('utf-8'))
+# Define the Python code as a string
+python_code = 'from git import Repo'
+
+# Execute the Python code using exec()
+try:
+    exec(python_code)
+    print('Python code executed successfully.')
+except Exception as e:
+    print('Error executing Python code:', e)
 
 
 _run_catpackgit() {
